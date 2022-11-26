@@ -3,9 +3,7 @@ import "../../style.css"
 
 const Header = () => {
     return (
-        <div>
-            <header><img src={LOGO} width="50" alt="Logo de noticias" /></header>
-        </div>
+            <header><img src={LOGO} width="55" alt="Logo de noticias" /></header>
     )
 };
 
