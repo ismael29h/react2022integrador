@@ -1,0 +1,29 @@
+body {
+    background-color: lightblue;
+}
+
+#busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pagina {
+    margin: 10px 10px 10px 10px;
+}
+
+header {
+    border-width: 5;
+    border-style: solid;
+    border-radius: 5px;
+    width: 100%;
+}
+
+footer {
+    border-width: 5;
+    border-style: solid;
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
