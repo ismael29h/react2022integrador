@@ -19,13 +19,16 @@ body {
 
 header {
     display: flex;
-    top: 2%;
+    position: absolute;
     border-width: 2;
     border-style: solid;
     width: 95%;
+    margin-bottom: 0%;
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     bottom: 2%;
     border-width: 2;
