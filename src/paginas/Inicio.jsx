@@ -20,8 +20,6 @@ const Inicio = () => {
         const {Search: status, articles, totalResults} = await getListadoNoticias(searchParams.get('query'), pagina);
         setNoticias(articles);
         console.log(await getListadoNoticias(searchParams.get('query'), 1));
-        console.log(totalResults)
-        console.log(articles)
         setCantidadPaginas(Math.ceil(parseInt(totalResults)/10));
         setIsLoading(false);
     }
