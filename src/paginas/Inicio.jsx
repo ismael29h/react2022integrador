@@ -6,7 +6,7 @@ import { useSearchParams } from "react-router-dom";
 import Loading from "../componentes/Loading/loading";
 import Buscador from "../componentes/Buscador/Buscador";
 import { ListaNoticias } from "../componentes/Noticia/Noticia";
-
+import Paginador from "../componentes/Paginador/Paginador";
 
 const Inicio = () => {
     const [noticias, setNoticias] = useState();
@@ -45,6 +45,7 @@ const Inicio = () => {
             <Buscador onBuscar={onBuscar}/>
             { isLoading && <Loading /> }
             { noticias && <ListaNoticias noticias={noticias} /> }
+            { noticias && <Paginador cantidadPaginas={cantidadPaginas} onChange={onCambioPagina} /> }
         </Container>
     )
 
