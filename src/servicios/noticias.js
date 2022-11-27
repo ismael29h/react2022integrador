@@ -5,7 +5,7 @@ const LANGUAGE = 'es'
 
 
 export const getListadoNoticias = async (criterioBusqueda, paginaActual) => {
-    const respuesta = await fetch('${OMDB_API}/v2/everything?q=${criterioBusqueda}&apiKey=${API_KEY}&page=${paginaActual}&pageSize=${PAGE_SIZE}&language=${LANGUAGE}');
+    const respuesta = await fetch(`${OMDB_API}/v2/everything?q=${criterioBusqueda}&apiKey=${API_KEY}&page=${paginaActual}&pageSize=${PAGE_SIZE}&language=${LANGUAGE}`);
     const noticias = await respuesta.json();
     return noticias;
 }

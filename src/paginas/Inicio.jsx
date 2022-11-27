@@ -1,7 +1,12 @@
+import { Container } from "@mui/material";
 import { useState } from "react";
 import { useEffect } from "react";
 import { getListadoNoticias } from "../servicios/noticias";
 import { useSearchParams } from "react-router-dom";
+import Loading from "../componentes/Loading/loading";
+import Buscador from "../componentes/Buscador/Buscador";
+import { ListaNoticias } from "../componentes/Noticia/Noticia";
+
 
 const Inicio = () => {
     const [noticias, setNoticias] = useState();
@@ -10,11 +15,14 @@ const Inicio = () => {
     const [cantidadPaginas, setCantidadPaginas] = useState(1)
     const [searchParams, setSearchParams] = useSearchParams();
 
-    const buscarNoticias = async () => {
-        setIsLoading(true);
-        const {Search: noticia, totalResultados} = await getListadoNoticias(searchParams.get('query'), pagina);
-        setNoticias(noticia);
-        setCantidadPaginas(Math.ceil(parseInt(totalResultados)/10));
+    const buscarNoticias = async (pagina) => {
+        setIsLoading(true);        
+        const {Search: status, articles, totalResults} = await getListadoNoticias(searchParams.get('query'), pagina);
+        setNoticias(articles);
+        console.log(await getListadoNoticias(searchParams.get('query'), 1));
+        console.log(totalResults)
+        console.log(articles)
+        setCantidadPaginas(Math.ceil(parseInt(totalResults)/10));
         setIsLoading(false);
     }
 
@@ -33,7 +41,11 @@ const Inicio = () => {
     }
 
     return (
-        <h1>Probando</h1>
+        <Container maxWidth='sm'>
+            <Buscador onBuscar={onBuscar}/>
+            { isLoading && <Loading /> }
+            { noticias && <ListaNoticias noticias={noticias} /> }
+        </Container>
     )
 
 
