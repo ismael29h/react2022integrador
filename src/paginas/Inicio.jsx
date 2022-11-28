@@ -12,14 +12,15 @@ const Inicio = () => {
     const [noticias, setNoticias] = useState();
     const [isLoading, setIsLoading] = useState(false);
     const [pagina, setPagina] = useState(1);
-    const [cantidadPaginas, setCantidadPaginas] = useState(1)
+    const [cantidadPaginas, setCantidadPaginas] = useState(1);
     const [searchParams, setSearchParams] = useSearchParams();
+    const [totalResultado, setTotalResultado] = useState(0);
 
     const buscarNoticias = async (pagina) => {
         setIsLoading(true);        
         const {Search: status, articles, totalResults} = await getListadoNoticias(searchParams.get('query'), pagina);
         setNoticias(articles);
-        console.log(await getListadoNoticias(searchParams.get('query'), 1));
+        setTotalResultado(totalResults)
         setCantidadPaginas(Math.ceil(parseInt(totalResults)/10));
         setIsLoading(false);
     }
@@ -42,6 +43,7 @@ const Inicio = () => {
         <Container maxWidth='sm'>
             <Buscador onBuscar={onBuscar}/>
             { isLoading && <Loading /> }
+            { noticias && <h3>Se han encontrado un total de {totalResultado} noticias relacionadas con "{searchParams.get('query')}"</h3> }
             { noticias && <ListaNoticias noticias={noticias} /> }
             { noticias && <Paginador cantidadPaginas={cantidadPaginas} onChange={onCambioPagina} /> }
         </Container>
