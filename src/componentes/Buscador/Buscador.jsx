@@ -10,7 +10,7 @@ const Buscador = ({ onBuscar }) => {
   return (
     <Paper
       component="div"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, marginTop:10 }}
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, marginTop:10, marginBottom:10}}
     >
       <InputBase
         sx={{ ml: 1, flex: 1 }}

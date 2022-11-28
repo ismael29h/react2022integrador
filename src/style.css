@@ -15,11 +15,8 @@ body {
     margin: 10px 10px 10px 10px;
 }
 
-
-
 header {
     display: flex;
-    position: absolute;
     border-width: 2;
     border-style: solid;
     width: 95%;
@@ -29,9 +26,9 @@ header {
 footer {
     display: flex;
     flex-direction: column;
-    position: absolute;
     bottom: 2%;
     border-width: 2;
     border-style: solid;
     width: 95%;
+    margin-Top: 30%;
 }

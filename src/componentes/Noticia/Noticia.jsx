@@ -18,12 +18,12 @@ const Noticia = ({
     const formatoFecha = (isoString) => {
       const f = new Date(isoString); 
       return (
-        'Fecha: '
+        'Publicado el: '
         + ('0' + f.getDate()).slice(-2) + '-' 
         + ('0' + f.getMonth()).slice(-2) + '-' 
-        + f.getFullYear() + ' '
+        + f.getFullYear() + ' a las '
         + ('0' + f.getHours()).slice(-2) + ':'
-        + ('0' + f.getMinutes()).slice(-2) + 'hs'
+        + ('0' + f.getMinutes()).slice(-2) + ' hs'
       )
     }
 

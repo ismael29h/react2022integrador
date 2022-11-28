@@ -7,6 +7,9 @@ import Loading from "../componentes/Loading/loading";
 import Buscador from "../componentes/Buscador/Buscador";
 import { ListaNoticias } from "../componentes/Noticia/Noticia";
 import Paginador from "../componentes/Paginador/Paginador";
+import Header from "../componentes/Header/Header";
+import Footer from "../componentes/Footer/Footer";
+
 
 const Inicio = () => {
     const [noticias, setNoticias] = useState();
@@ -42,14 +45,18 @@ const Inicio = () => {
     }
 
     return (
-        <Container maxWidth='sm'>
-            <Buscador onBuscar={onBuscar}/>
-            { isLoading && <Loading /> }
-            { noticias && !hayResultado && <h3>No se encontró nada relacionado con "{searchParams.get('query')}".</h3> }
-            { noticias && hayResultado && <h3>Está viendo hasta 10 noticias de {totalResultado} resultados.</h3> }
-            { noticias && <ListaNoticias noticias={noticias} /> }
-            { noticias && <Paginador cantidadPaginas={cantidadPaginas} onChange={onCambioPagina} /> }
-        </Container>
+        <div>
+            <Header />
+            <Container maxWidth='sm'>
+                <div id='busqueda'><Buscador onBuscar={onBuscar}/></div>
+                { isLoading && <Loading /> }
+                { !isLoading && noticias && !hayResultado && <div><h3>No se encontró nada relacionado con "{searchParams.get('query')}".</h3></div> }
+                { noticias && hayResultado && <h3>Está viendo hasta 10 noticias de {totalResultado} resultados.</h3> }
+                { noticias && <ListaNoticias noticias={noticias} /> }
+                <div id='busqueda'>{ noticias && <Paginador cantidadPaginas={cantidadPaginas} onChange={onCambioPagina} /> }</div>
+            </Container>
+            <Footer />
+        </div>
     )
 
 };
