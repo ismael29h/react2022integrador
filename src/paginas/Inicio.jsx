@@ -43,14 +43,11 @@ const Inicio = () => {
         <Container maxWidth='sm'>
             <Buscador onBuscar={onBuscar}/>
             { isLoading && <Loading /> }
-            { noticias && <h3>Se han encontrado un total de {totalResultado} noticias relacionadas con "{searchParams.get('query')}"</h3> }
+            { noticias && <h3>Está viendo hasta 10 noticias de {totalResultado} resultados.</h3> }
             { noticias && <ListaNoticias noticias={noticias} /> }
             { noticias && <Paginador cantidadPaginas={cantidadPaginas} onChange={onCambioPagina} /> }
         </Container>
     )
-
-
-
 
 };
 

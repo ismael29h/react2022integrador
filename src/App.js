@@ -1,5 +1,6 @@
 import './App.css';
 import Inicio from './paginas/Inicio'
+import Error404 from './componentes/Errores/404';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -10,11 +11,13 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Inicio />
+    element: <Inicio />,
+    errorElement: <Error404 />
   },
   {
     path: "/buscador",
     element: <Inicio />,
+    errorElement: <Error404 />
   },
 ]);
 
