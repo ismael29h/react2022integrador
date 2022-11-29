@@ -10,13 +10,14 @@ const Buscador = ({ onBuscar }) => {
   return (
     <Paper
       component="div"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, marginTop:10, marginBottom:10}}
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400, marginTop:1, marginBottom:1}}
     >
       <InputBase
         sx={{ ml: 1, flex: 1 }}
         placeholder="Buscar noticia (más de 3 caracteres)"
         inputProps={{ 'aria-label': 'search google maps' }}
         value={criterioBusqueda}
+        role="searchbox"
         onChange={(e) => {
           setCriterioBusqueda(e.target.value)
         }}
@@ -30,6 +31,7 @@ const Buscador = ({ onBuscar }) => {
             onBuscar(criterioBusqueda)
           }
         }}
+        role="button"
       >
         <SearchIcon />
       </IconButton>

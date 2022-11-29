@@ -55,7 +55,7 @@ const Inicio = () => {
                 { noticias && <ListaNoticias noticias={noticias} /> }
                 <div id='busqueda'>{ noticias && <Paginador cantidadPaginas={cantidadPaginas} onChange={onCambioPagina} /> }</div>
             </Container>
-            <Footer />
+            { !hayResultado && <Footer />}
         </div>
     )
 

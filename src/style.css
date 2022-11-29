@@ -1,8 +1,13 @@
+html {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
     background-color: lightblue;
-
+    margin: 0;
+    height: 100%;
 }
 
 #busqueda {
@@ -15,12 +20,19 @@ body {
     margin: 10px 10px 10px 10px;
 }
 
+#espacio {
+    height: 100px;
+}
+
 header {
     display: flex;
     border-width: 2;
     border-style: solid;
-    width: 95%;
-    margin-bottom: 0%;
+    width: 100%;
+    margin-bottom: 30px;
+    flex: 0 0 auto;
+    position: relative;
+    background-color: rgb(74, 164, 216);
 }
 
 footer {
@@ -29,6 +41,9 @@ footer {
     bottom: 2%;
     border-width: 2;
     border-style: solid;
-    width: 95%;
-    margin-Top: 30%;
+    width: 100%;
+    margin-top: 10px;
+    flex: 0 0 auto;
+    position: fixed;
+    background-color: rgb(74, 164, 216);
 }

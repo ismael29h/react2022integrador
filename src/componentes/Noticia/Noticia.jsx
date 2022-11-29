@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import { DEFAULT_IMAGE } from '../../libs/constantes';
 
-
 const Noticia = ({
   noticia,
   onChange
@@ -64,7 +63,7 @@ export const ListaNoticias = ({ noticias }) => {
         flexWrap: 'wrap',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        marginTop: '20px',
+        marginTop: '2px',
       }}>
         {
           noticias.map((noticia) => {
