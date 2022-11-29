@@ -44,9 +44,9 @@ const Noticia = ({
             <Typography gutterBottom variant="h5" component="div">
               {noticia.title}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            {/*<Typography variant="body2" color="text.secondary">
                 {noticia.description}
-            </Typography>
+    </Typography>*/}
             <Typography variant="subtitle1" color="text.secondary">
                 {formatoFecha(noticia.publishedAt)}
             </Typography>
