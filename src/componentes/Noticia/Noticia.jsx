@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import { DEFAULT_IMAGE } from '../../libs/constantes';
 
+
 const Noticia = ({
   noticia,
   onChange

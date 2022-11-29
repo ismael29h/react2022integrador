@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# INFORMATORIO - REACT 2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Profesor: Manuel Lucero
+## Alumno: Ismael Hernán
 
-## Available Scripts
+### Validaciones sobre el input:
 
-In the project directory, you can run:
+[x] No se debe realizar la búsqueda a menos que el usuario haya
+escrito al menos 3 caracteres
 
-### `npm start`
+[x] El botón buscar se debe habilitar cuando el input cumpla con la
+condición anterior.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[ ] [OPCIONAL], la búsqueda puede realizarse apretando la tecla
+enter del teclado.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[x] Se deberá presentar un spinner/loading para que el usuario
+sepa de que se está realizando un procesamiento.
 
-### `npm test`
+[x] En caso de que ocurra algún fallo, se deberá presentar un
+mensaje adecuado, explicando el error al usuario.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[x] En caso de que no haya resultados, se deberá presentar un
+mensaje adecuado, que indique que no hay resultados para la
+búsqueda.
 
-### `npm run build`
+[x] La búsqueda sólo debe realizarse en noticias en español
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Necesario en cada noticia:
+[x] El nombre de la plataforma de origen de la noticia
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[x] El título de la noticia
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[x] La imagen de portada de la noticia
 
-### `npm run eject`
+[x] La fecha de publicación de la noticia en formato:dd-mm-aaaa -
+hh:mm hs. Ejemplo: Publicado el: 28-06-2022 a las 03:00 hs.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[x] Cuando el usuario haga click sobre una noticia, la misma
+deberá de abrirse en una nueva pestaña.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Condiciones Generales:
+[x] El buscador debe estar disponible ya sea en la raíz
+(http://localhost) o en la ruta /buscador
+(http://localhost/buscador).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[x] En caso que el usuario ingrese en una url inválida, se debe
+presentar una página de 404, con el mensaje recurso no
+encontrado, con los estilos apropiados.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[x] El proyecto debe contener al menos una prueba unitaria.
 
-## Learn More
+[x] El proyecto deberá realizarse en grupo de 2 personas como
+máximo.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[x] El proyecto se deberá subir a un repositorio en github y
+compartir con el tutor de la comisión a la que pertenezca.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[x] La aplicación debe contener un Footer y Header, acorde a los
+estilos escogidos.
 
-### Code Splitting
+[x] Los estilos, colores y fuentes quedan a criterio de las personas
+que integren el equipo. Las imágenes presentadas son a modo
+de ejemplo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[x] [OPCIONAL] Uso de librerías/frameworks como mui, bootstrap,
+styled-components
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Incluye: 
++ @mui/material @emotion/react @emotion/styled
++ react-router-dom
